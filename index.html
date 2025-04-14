@@ -3,218 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
   <title>Lilylys Digital Hub</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-    <style>
-        :root {
-            --primary: #ff6b6b;
-            --secondary: #4ecdc4;
-        }
+  <style>
+    :root {
+      --primary: #ff6b6b;
+      --secondary: #4ecdc4;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            min-height: 100vh;
-            padding: 20px;
-            animation: gradientShift 10s infinite alternate;
-        }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      padding: 20px;
+      animation: gradientShift 10s infinite alternate;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+    }
 
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            margin: 15px auto;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      margin: 15px auto;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
 
-        .profile-img:hover {
-            transform: rotate(15deg) scale(1.05);
-        }
+    .profile-img:hover {
+      transform: rotate(15deg) scale(1.05);
+    }
 
-        h1 {
-            color: var(--primary);
-            font-size: 2.3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
+    h1 {
+      color: var(--primary);
+      font-size: 2.3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
 
-        p.lead {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 25px;
-        }
+    p.lead {
+      color: #666;
+      font-size: 1.1em;
+      margin-bottom: 25px;
+    }
 
-        .link-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin: 20px 0;
-        }
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
 
-        .link-card {
-            background: white;
-            padding: 12px 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #333;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
+    .link-card {
+      background: white;
+      padding: 12px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
 
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: var(--secondary);
-        }
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-color: var(--secondary);
+    }
 
-        .link-card i {
-            font-size: 1.3em;
-            width: 25px;
-            text-align: center;
-        }
+    .link-card i {
+      font-size: 1.3em;
+      width: 25px;
+      text-align: center;
+    }
 
-        .game-section {
-            background: #f8f9fa;
-            padding: 18px;
-            border-radius: 12px;
-            margin-top: 25px;
-        }
+    .game-section {
+      background: #f8f9fa;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
 
-        .game-badge {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin: 4px;
-            font-size: 0.85em;
-            transition: transform 0.2s;
-        }
+    .game-badge {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 0.85em;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
 
-        .game-badge:hover {
-            transform: scale(1.05);
-        }
+    .game-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
+    .game-badge.copied {
+      background: #4CAF50;
+      transform: scale(1.05);
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .profile-img {
-                width: 110px;
-                height: 110px;
-            }
-        }
-    </style>
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.8em;
+      }
+      
+      .profile-img {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="elaina.jpg" alt="Lilylys" class="profile-img">
-        
-        <h1>I'm Lilylys! 💝</h1>
-        <p class="lead">Connected and Play Together!</p> <br>
-        <p class="lead">Sorry I Just Have Instagram & Facebook (Pins Is Locked ><), Maybe I Will Update Soon!</p>
-        
+  <div class="container">
+    <img src="elaina.jpg" alt="Lilylys" class="profile-img">
+    
+    <h1>I'm Lilylys! 💝</h1>
+    <p class="lead">Connected and Play Together!</p> <br>
+    <p class="lead">Sorry I Just Have Instagram & Facebook (Pins Is Locked ><), Maybe I Will Update Soon!</p>
+    
 
-        <div class="link-grid">
-            <a href="https://www.instagram.com/lilylys0?igsh=YzljYTk1ODg3Zg==" class="link-card">
-                <i class="fab fa-instagram" style="color: #E1306C;"></i>
-                Instagram
-            </a>
-            
-            <a href="https://www.facebook.com/profile.php?id=100084112656817" class="link-card">
-                <i class="fab fa-facebook" style="color: #1877F2;"></i>
-                Facebook
-            </a>
-            
-            <a href="https://pin.it/2EAzCAaVj" class="link-card">
-                <i class="fab fa-pinterest" style="color: #E60023;"></i>
-                Pinterest
-            </a>
-        </div>
-        <br>
-      <p class="lead">Click The Button Copy My IDs!</p>
-        
-        <div class="game-section">
-    <h2>Game IDs 🎮</h2>
-    <div class="game-badge" onclick="copyToClipboard(this)">Honor Of King: Lilylys</div>
-    <div class="game-badge" onclick="copyToClipboard(this)">Free Fire: Karekayoshi</div>
-    <div class="game-badge" onclick="copyToClipboard(this)">Blue Archive: Reichi</div>
-    <div class="game-badge" onclick="copyToClipboard(this)">Mobile Legends: Miyauchi</div>
-</div>
+    <div class="link-grid">
+      <a href="https://www.instagram.com/lilylys0?igsh=YzljYTk1ODg3Zg==" class="link-card">
+        <i class="fab fa-instagram" style="color: #E1306C;"></i>
+        Instagram
+      </a>
+      
+      <a href="https://www.facebook.com/profile.php?id=100084112656817" class="link-card">
+        <i class="fab fa-facebook" style="color: #1877F2;"></i>
+        Facebook
+      </a>
+      
+      <a href="https://pin.it/2EAzCAaVj" class="link-card">
+        <i class="fab fa-pinterest" style="color: #E60023;"></i>
+        Pinterest
+      </a>
+    </div>
+    <br>
+    <p class="lead">Click The Button Copy My IDs!</p>
+    
+    <div class="game-section">
+      <h2>Game IDs 🎮</h2>
+      <div class="game-badge" onclick="copyGameID(this)">Honor Of King: Lilylys</div>
+      <div class="game-badge" onclick="copyGameID(this)">Free Fire: Karekayoshi</div>
+      <div class="game-badge" onclick="copyGameID(this)">Blue Archive: Reichi</div>
+      <div class="game-badge" onclick="copyGameID(this)">Mobile Legends: Miyauchi</div>
+    </div>
 
-<script>
-function copyToClipboard(element) {
-  
-    const tempInput = document.createElement("textarea");
-    tempInput.value = element.textContent;
-    document.body.appendChild(tempInput);
-    
-    tempInput.select();
-    tempInput.setSelectionRange(0, 99999);
-    
-    document.execCommand("copy");
-    
-    document.body.removeChild(tempInput);
-    
-    const originalText = element.textContent;
-    element.textContent = "Copied!";
-    
-    setTimeout(() => {
-        element.textContent = originalText;
-    }, 1000);
-}
-</script>
+    <p class="footer-text">Made with love lilylys, and lovely deepseek 🥳💖</p>
+  </div>
 
-<style>
-.game-badge {
-    background-color: #white;
-    padding: 8px 12px;
-    margin: 5px 0;
-    border-radius: 15px;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.game-badge:hover {
-    background-color: #white;
-    transform: scale(1.02);
-}
-</style>
+  <script>
+    // Improved copy function that only copies the ID part
+    function copyGameID(element) {
+      // Get the text after ":"
+      const gameID = element.innerText.split(":")[1].trim();
+      
+      // Create temporary input element
+      const tempInput = document.createElement("input");
+      tempInput.value = gameID;
+      document.body.appendChild(tempInput);
+      
+      // Select and copy
+      tempInput.select();
+      document.execCommand("copy");
+      
+      // Remove temporary input
+      document.body.removeChild(tempInput);
+      
+      // Visual feedback
+      const originalText = element.innerText;
+      element.innerText = "Copied!";
+      element.classList.add("copied");
+      
+      // Reset after 1 second
+      setTimeout(() => {
+        element.innerText = originalText;
+        element.classList.remove("copied");
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
